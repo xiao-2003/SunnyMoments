@@ -44,7 +44,7 @@ class PlaceFragment : Fragment() {
             } else {
                 recyclerView?.visibility = View.GONE
                 val bgImageView = view?.findViewById<ImageView>(R.id.bgImageView)
-                bgImageView?.visibility = View.VISIBLE
+                bgImageView?.visibility = View.VISIBLE // VISIBLE 可见的
                 viewModel.placeList.clear()
                 adapter.notifyDataSetChanged()
             }
