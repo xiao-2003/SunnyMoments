@@ -92,4 +92,13 @@ object SunnyMomentsNetwork {
             })
         }
     }
+
+    private val weatherService = ServiceCreator.create(WeatherService::class.java)
+
+    suspend fun getDailyWeather(lng: Double, lat: Double) =
+        weatherService.getDailyWeather(lng, lat).await()
+
+    suspend fun getRealtimeWeather(lng: Double, lat: Double) =
+        weatherService.getRealtimeWeather(lng, lat).await()
+
 }
